@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title><%=title %></title>
+  </head>
+
+  <body>
+    <h1>Halaman Subject</h1>
+    <a href = "/">Back To Home</a>
+    <table border="1px solid black" width = "1000px;" style="margin-top:20px;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>SUBJECT NAME</th>
+          <th>CREATED AT</th>
+          <th>UPDATED AT</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%data.forEach( row => { %>
+        <tr>
+          <td><%= row.id %></td>
+          <td><%= row.subject__name %></td>
+          <td><%= row.createdAt %></td>
+          <td><%= row.updatedAt %></td>
+          <td>
+            <a href="/subjects/edit/<%=row.id%>">Edit</a>
+            <a href="/subjects/delete/<%=row.id%>">Hapus</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <form class="" style="margin-top:10px;" action="/subjects" method="POST">
+      <input type="text" name="subject_name" placeholder="Masukan Nama Disini">
+      <input type="submit" value="SUBMIT">
+    </form>
+  </body>
+</html>
