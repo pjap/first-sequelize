@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended : true}))
 app.use(bodyParser.json())
 
+// Calling Routes To APP
 let index = require('./routes/index.js')
 let teachers = require('./routes/teachers.js')
 let subjects = require('./routes/subjects.js')

@@ -12,8 +12,8 @@ module.exports = {
 
     return queryInterface.addColumn(
     'Teachers',
-    'email',
-    Sequelize.STRING
+    'subjectId',
+    Sequelize.INTEGER
     )
   },
 

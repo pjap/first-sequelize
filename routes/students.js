@@ -13,7 +13,7 @@ route.get('/', function(req,res) {
   })
 })
 
-// CREATE DATA TABLE FROM MODULE CONTACTS
+// CREATE DATA TABLE FROM MODULE STUDENTS
 route.post('/', function(req,res) {
   models.Student.build({
     first_name : req.body.first_name,
@@ -28,7 +28,7 @@ route.post('/', function(req,res) {
   })
 })
 
-// DELETE DATA TABLE FROM MODULE CONTACTS
+// DELETE DATA TABLE FROM MODULE STUDENTS
 route.get('/delete/:id', function(req,res) {
   models.Student.destroy({
     where: {
